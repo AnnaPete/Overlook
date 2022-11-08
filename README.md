@@ -14,8 +14,6 @@ Now try to commit something (just add a line in the README) and push it up to yo
 
 ## Setup
 
-After one person has gone through the steps of cloning down this repo and editing the remote, everyone should clone down the repo.
-
 Then install the library dependencies. Run:
 
 ```bash

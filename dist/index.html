@@ -1,16 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webpack Starter Kit</title>
-</head>
-<body>
-  <img src="./images/turing-logo.png" alt="turing logo">
-  
-  <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
-  <script src="bundle.js"></script>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Overlook </title>
+  </head>
+  <body>
+    <header class="header-container" id="header">
+      <video>
 
-</body>
+      </video>
+      <img src="./images/turing-logo.png" alt="turing logo">
+      <h1 class="hotel-name"> Hotel OverLook </h1>
+      <div class="header-button-bar">
+        <button>
+          <h3 class="currency"> USD </h3>
+        </button>
+        <button>
+          <img src="https://cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba856a8bb081c7ded40efa.png" alt="language">
+        </button>
+        <button>
+          <img src="./images/questions-button.png" alt="frequently asked questions">
+        </button>
+        <button>
+          <img src="./images/user (1).png" alt="profile-image">
+          <span class="user-profile" id="profile"> Username </span>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="search-container">
+        <section class="search-calendar">
+          <label for="start">Check-In:</label>
+          <input type="date" id="start" name="trip-start" value="2022-11-10" min="2022-01-01" max="2022-12-31">
+          <label for="end">Check-Out:</label>
+          <input type="date" id="end" name="trip-end" value="2022-11-11" min="2022-11-11" max="2023-12-31">
+          <button class="search-button"> Search </button>
+        </section>
+      </section>
+      <section class="user-dashboard">
+        <h1 class="your-stays"> Your Stays </h1>
+        <section class="recent-stays">
+          <h3 class="recent-stays"> Recent Stays </h3>
+          <p class="total-spent">Total Spent: </p>
+          <section class="recent-stays-container"></section>
+        </section>
+        <section class="upcoming-stays">
+          <h3 class="upcoming-stays"> Upcoming Stays </h3>
+          <section class="upcoming-stays-container"></section>
+        </section>
+      </section>
+      <section class="book-room hidden">
+
+      </section>
+    </main>
+    <script src="bundle.js"></script>
+  </body>
 </html>

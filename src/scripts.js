@@ -9,3 +9,16 @@ import './images/turing-logo.png'
 
 
 console.log('This is the JavaScript entry file - your code begins here.');
+
+// `<li class="cards">
+//   <div class="card-container">
+//     <img src="${}" alt="${}">
+//     <div class="card-content">
+//       <h3 class="card-title"></h3>
+//       <p class="card-subtitle"></p>
+//       <p class="card-price"></p>
+//     </div>
+//   </div>
+// </li>`
+
+// `Total Spent: ${}`

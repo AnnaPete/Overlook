@@ -13,7 +13,11 @@ body {
 .header-button-bar {
   display: flex;
   flex-direction: row;
+  text-align: left;
+  cursor: pointer;
 }
+
+
 
 .search-input-container {
   color: #333;

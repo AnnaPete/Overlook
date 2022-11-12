@@ -1,5 +1,16 @@
+class Customer {
+  constructor(data) {
+    this.id = data.id
+    this.name = data.name
+    this.bookings = []
+  }
 
-// id: number
-// name: "Name Name"
+  filterBookings(bookings) {
+    this.bookings = bookings.filter(booking => {
+      return booking.userID === this.id
+    })
+  }
+
+}
 
 export default Customer

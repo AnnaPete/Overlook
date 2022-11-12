@@ -1,4 +1,4 @@
-const Room {
+class Room {
   constructor(data) {
     this.number = data.roomNum
     this.roomType = data.roomType

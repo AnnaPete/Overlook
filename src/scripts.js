@@ -1,18 +1,37 @@
-// This is the JavaScript entry file - your code begins here
-// Do not delete or rename this file ********
-
-// An example of how you tell webpack to use a CSS (SCSS) file
+// Files
 import './css/styles.css'
+import getData from './apiCalls'
+import Customer from './Customer'
+import Room from './Room'
+import Booking from './Booking'
 
-// An example of how you tell webpack to use an image (also need to link to it in the index.html)
+// APIs
+const customersURL = 'http://localhost:3001/api/v1/customers'
+const bookingsURL = 'http://localhost:3001/api/v1/bookings'
+const roomsURL = 'http://localhost:3001/api/v1/rooms'
+
+// Images that I didn't know I needed to import
 import './images/turing-logo.png'
 import './images/usflag.png'
 import './images/user.png'
 import './images/hand-pointer.png'
 import './images/questions-button.png'
 
+// Global Variables
 
-console.log('This is the JavaScript entry file - your code begins here.')
+
+// Query Selectors
+
+
+// Event Listeners
+window.addEventListener('load', fetchData([customersURL, bookingsURL, roomsURL]))
+
+// Event Handlers
+
+
+// Other Functions
+
+
 
 // `<li class="cards">
 //   <div class="card-container">

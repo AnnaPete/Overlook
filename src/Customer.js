@@ -11,6 +11,21 @@ class Customer {
     })
   }
 
+  bookStay() {
+
+  }
+
+  viewPastStays() {
+
+  }
+
+  viewUpcomingStays() {
+
+  }
+
+  viewAllStays() {
+    
+  }
 }
 
 export default Customer

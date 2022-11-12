@@ -60,46 +60,34 @@ describe('Check to see if the room has a room number', function() {
     expect(room1.number).to.equal(1);
     expect(room2.number).to.equal(2);
   });
-});
 
-describe('Check to see what type of room it is', function() {
   it('should have a room type', function() {
     expect(room1.roomType).to.equal("residential suite");
     expect(room2.roomType).to.equal("suite");
   });
-});
 
-describe('See if the room has a bidet', function() {
   it('should have a bidet', function() {
     expect(room1.bidet).to.equal(true);
     expect(room5.bidet).to.equal(true);
   });
-});
 
-describe('See if the room does not have a bidet', function() {
   it('should not have a bidet', function() {
     expect(room3.bidet).to.equal(false);
     expect(room4.bidet).to.equal(false);
   });
-});
 
-describe('Check to see what size bed is in the room', function() {
   it('should specify what size of bed the room has', function() {
     expect(room2.bedSize).to.equal("full");
     expect(room3.bedSize).to.equal("king");
     expect(room6.bedSize).to.equal("queen");
   });
-});
 
-describe('Check to see how many beds are in the room', function() {
   it('should return the number of beds that are in the room', function() {
     expect(room3.numBeds).to.equal(1);
     expect(room5.numBeds).to.equal(2);
     expect(room6.numBeds).to.equal(1);
   });
-});
 
-describe('Check to see how much a room costs per night', function() {
   it('should show the cost per night in dollars', function() {
     expect(room1.costPerNight).to.equal(358.4);
     expect(room2.costPerNight).to.equal(477.38);

@@ -55,7 +55,7 @@ numBeds: 1,
 costPerNight: 397.02
 }
 
-describe('Check to see if the room has a room number', function() {
+describe('Room class', function() {
   it('should have a room number', function() {
     expect(room1.number).to.equal(1);
     expect(room2.number).to.equal(2);

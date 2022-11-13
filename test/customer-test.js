@@ -19,7 +19,7 @@ describe('Customer class', function() {
     bookingsData = bookings.map((booking) => {
       return new Booking(booking)
     })
-  })
+  })  
   it('should have a customer id', function() {
     expect(customer1.id).to.equal(1);
     expect(customer2.id).to.equal(2);
@@ -64,23 +64,51 @@ describe('Customer class', function() {
     ]);
   });
 
-  it.skip('should be able to create a booking', function() {
-    expect(customer5.bookStay()).to.equal();
-    expect(customer6.bookStay()).to.equal();
+  it('should be able to view past stays. If there are none, it should display an error message', function() {
+    customer5.filterBookings(bookingsData)
+    customer6.filterBookings(bookingsData)
+    
+    expect(customer5.viewPastStays()).to.deep.equal(
+      [
+        new Booking({id: "5fwrgu4i7k55hl6sz",
+        userID: 5,
+        date: "2022/04/22",
+        roomNumber: 15
+        }), 
+        new Booking({id: "5fwrgu4i7k55hl6t6",
+        userID: 5,
+        date: "2022/01/10",
+        roomNumber: 12
+        })
+      ]
+    );
+    expect(customer6.viewPastStays()).to.deep.equal(
+      [
+        new Booking({id: "5fwrgu4i7k55hl6t8",
+        userID: 6,
+        date: "2022/02/05",
+        roomNumber: 12
+        })
+      ]
+    );
   });
 
-  it.skip('should be able to view past stays', function() {
-    expect().to.equal();
-    expect().to.equal();
-  });
-
-  it.skip('should be able to view upcoming stays', function() {
-    expect().to.equal();
-    expect().to.equal();
-  });
-
-  it.skip('should be able to view all stays', function() {
-    expect().to.equal();
-    expect().to.equal();
+  it('should be able to view upcoming stays. If there are none, it should display an error message', function() {
+    let errorMsg = "Oops! You have no upcoming stays. Feel free to book one now!"
+    customer5.filterBookings(bookingsData)
+    customer6.filterBookings(bookingsData)
+    customer5.viewUpcomingStays()
+    customer6.viewUpcomingStays()
+    expect(customer5.viewUpcomingStays()).to.equal(errorMsg);
+    expect(customer6.viewUpcomingStays()).to.deep.equal(
+      [
+        new Booking({
+        id: "5fwrgu4i7k55hl6t9",
+        userID: 6,
+        date: "2023/12/14",
+        roomNumber: 14
+        })
+      ]
+    );
   });
 })
